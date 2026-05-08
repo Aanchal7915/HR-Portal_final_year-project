@@ -1,0 +1,5 @@
+{
+  "buildCommand": "npm run build --prefix HR-portal",
+  "outputDirectory": "HR-portal/build",
+  "framework": "create-react-app"
+}
