@@ -25,6 +25,21 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = async (email, password, role, deviceInfo) => {
+    // --- MOCK DATA FOR TESTING ---
+    if (role === 'employee' && email === 'user@gmail.com' && password === '123456') {
+      const mockData = { _id: 'mock-emp-id', name: 'Mock Employee', email: 'user@gmail.com', token: 'mock-jwt-token', role: 'employee' };
+      localStorage.setItem('userInfo', JSON.stringify(mockData));
+      setUser(mockData);
+      return;
+    }
+    if (role === 'hr' && email === 'admin@gmail.com' && password === '123456') {
+      const mockData = { _id: 'mock-hr-id', name: 'Mock Admin', email: 'admin@gmail.com', token: 'mock-jwt-token', role: 'hr' };
+      localStorage.setItem('userInfo', JSON.stringify(mockData));
+      setUser(mockData);
+      return;
+    }
+    // -----------------------------
+
     const url = role === 'hr' ? '/auth/login/hr' : '/auth/login/employee';
 
     // Prepare request body - include deviceInfo and isTouchDevice for employee logins
