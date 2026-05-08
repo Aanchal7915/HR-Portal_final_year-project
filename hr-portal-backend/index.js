@@ -75,7 +75,8 @@ app.use(cors({
         'https://verticalelevatorhrportal.avanienterprises.in',
         'https://gaonseghartakhrportal.avanienterprises.in',
         'https://dakshhrportal.avanienterprises.in',
-        'https://dakshhrportal.avanienterprises.in/'
+        'https://dakshhrportal.avanienterprises.in/',
+        'https://hr-portal-final-year-project-kagy.vercel.app'
     ],
     credentials: true
 }));
@@ -88,7 +89,7 @@ app.set("trust proxy", true);
 
 // A simple root route to test if the server is running
 app.get('/', (req, res) => {
-    res.send('AVANI ENTERPRISES HR Portal API is running...');
+    res.send('CODEXA HR Portal API is running...');
 });
 
 // Define API routes
