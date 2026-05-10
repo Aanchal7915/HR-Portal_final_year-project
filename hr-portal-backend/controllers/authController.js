@@ -89,7 +89,7 @@ exports.requestRegistrationOtp = async (req, res) => {
 
         // --- CHANGE: Send the OTP email ONLY to the HR admins ---
         const hrApprovalMessage = `
-            <p>A new employee has requested to join the AVANI ENTERPRISES portal.</p>
+            <p>A new employee has requested to join the CODEXA portal.</p>
             <p><b>Name:</b> ${name}</p>
             <p><b>Email:</b> ${email}</p>
             <p>Please provide them with the following One-Time Password (OTP) to complete their registration:</p>
@@ -162,7 +162,7 @@ exports.forgotPassword = async (req, res) => {
         // --- CHANGE: Send email ONLY to the employee who requested it ---
         await sendEmail({
             to: employee.email,
-            subject: 'Your Password Reset OTP for AVANI ENTERPRISES',
+            subject: 'Your Password Reset OTP for CODEXA',
             html: message,
         });
 

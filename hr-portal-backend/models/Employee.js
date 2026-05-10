@@ -112,14 +112,14 @@ EmployeeSchema.pre('save', async function(next) {
     // Generate Employee ID only if it's a new employee and doesn't have one
     if (this.isNew && !this.employeeId) {
         // Find the employee with the numerically highest ID, not the most recently created one.
-        const lastEmployee = await this.constructor.findOne({ employeeId: { $regex: /^AVANI-/ } }).sort({ employeeId: -1 });
+        const lastEmployee = await this.constructor.findOne({ employeeId: { $regex: /^(AVANI|CODEXA)-/ } }).sort({ employeeId: -1 });
         
         let newIdNumber = 1001;
         if (lastEmployee && lastEmployee.employeeId) {
             const lastIdNumber = parseInt(lastEmployee.employeeId.split('-')[1]);
             newIdNumber = lastIdNumber + 1;
         }
-        this.employeeId = `AVANI-${newIdNumber}`;
+        this.employeeId = `CODEXA-${newIdNumber}`;
     }
 
     // Hash the password ONLY if it has been modified (or is new).

@@ -319,7 +319,7 @@ exports.createAnnouncement = async (req, res) => {
                         subject: `📢 New Announcement: ${title}`,
                         html: `
                             <div style="font-family: sans-serif; padding: 20px; color: #433020; background-color: #fffbf5;">
-                                <h2 style="color: #8a6144; border-bottom: 2px solid #8a6144; padding-bottom: 10px;">New Announcement from AVANI ENTERPRISES</h2>
+                                <h2 style="color: #8a6144; border-bottom: 2px solid #8a6144; padding-bottom: 10px;">New Announcement from CODEXA</h2>
                                 <h3 style="margin-top: 20px;">${title}</h3>
                                 <p style="line-height: 1.6;">${content}</p>
                                 <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;" />
@@ -871,7 +871,7 @@ exports.getEmployeeRankings = async (req, res) => {
 
 
 // Employees that should always show 0 penalties
-const EXEMPT_EMPLOYEES = ["AVANI-1003", "AVANI-1007", "AVANI-1022"];
+const EXEMPT_EMPLOYEES = ["CODEXA-1003", "CODEXA-1007", "CODEXA-1022"];
 
 
 exports.getPenalties = async (req, res) => {
@@ -1094,7 +1094,7 @@ exports.getEmployeePenalties = async (req, res) => {
 //             {
 //                 $project: {
 //                     _id: 0,
-//                     employeeId: 1, // string code (AVANI-1003)
+//                     employeeId: 1, // string code (CODEXA-1003)
 //                     name: 1,
 //                     department: 1,
 //                     penaltyCount: 1,

@@ -124,11 +124,11 @@ const generateSalarySlips = async (req, res) => {
                     isEdited: false,
                     generatedBy: req.user._id,
                     notes: notes || '',
-                    companyName: companyName || 'Avani Enterprises',
-                    companyAddress: companyAddress || 'Soniya Vihar, Delhi',
+                    companyName: companyName || 'Codexa',
+                    companyAddress: companyAddress || 'Codexa Tech Park, Bangalore',
                     companyGst: companyGst || '',
                     authorizedSignatory: authorizedSignatory || 'Director',
-                    companyStamp: companyStamp || 'AVANI ENTERPRISES',
+                    companyStamp: companyStamp || 'CODEXA',
                     authorizedSignatoryImage: authorizedSignatoryImage || '',
                     companyStampImage: companyStampImage || '',
                     employeeBankDetails: {
@@ -505,11 +505,11 @@ const getLatestCompanyInfo = async (req, res) => {
 
         if (!latestSlip) {
             return res.status(200).json({
-                companyName: 'Avani Enterprises',
-                companyAddress: 'Soniya Vihar, Delhi',
+                companyName: 'Codexa',
+                companyAddress: 'Codexa Tech Park, Bangalore',
                 companyGst: '',
                 authorizedSignatory: 'Director',
-                companyStamp: 'AVANI ENTERPRISES',
+                companyStamp: 'CODEXA',
                 authorizedSignatoryImage: '',
                 companyStampImage: ''
             });

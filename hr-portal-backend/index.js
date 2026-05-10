@@ -23,7 +23,7 @@
 
 // // A simple root route to test if the server is running
 // app.get('/', (req, res) => {
-//     res.send('AVANI ENTERPRISES HR Portal API is running...');
+//     res.send('CODEXA HR Portal API is running...');
 // });
 
 

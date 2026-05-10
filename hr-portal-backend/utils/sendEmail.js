@@ -10,7 +10,7 @@ const sendEmail = async (options) => {
         cc: options.cc,
         from: {
             email: process.env.FROM_EMAIL,
-            name: 'AVANI ENTERPRISES'
+            name: 'CODEXA'
         },
         subject: options.subject,
         html: options.html,

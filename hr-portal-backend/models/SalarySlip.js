@@ -94,11 +94,11 @@ const salarySlipSchema = new mongoose.Schema({
     },
     companyName: {
         type: String,
-        default: 'Avani Enterprises'
+        default: 'Codexa'
     },
     companyAddress: {
         type: String,
-        default: 'Soniya Vihar, Delhi'
+        default: 'Codexa Tech Park, Bangalore'
     },
     companyGst: {
         type: String,
@@ -153,7 +153,7 @@ const salarySlipSchema = new mongoose.Schema({
     },
     companyStamp: {
         type: String,
-        default: 'AVANI ENTERPRISES'
+        default: 'CODEXA'
     },
     authorizedSignatoryImage: {
         type: String,
