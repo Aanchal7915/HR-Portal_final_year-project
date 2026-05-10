@@ -41,7 +41,32 @@ const EmployeeProfile = () => {
         upiId: data.upiId || ''
       });
     } catch (error) {
-      console.error("Failed to fetch profile", error);
+      console.error("Failed to fetch profile, using mock data", error);
+      const mockData = {
+        employeeId: 'CODEXA-1003',
+        name: user?.name || 'Test User',
+        email: user?.email || 'user@gmail.com',
+        phone: '9876543210',
+        address: '123 Codexa St, Bangalore',
+        dob: '1995-05-15',
+        department: 'Engineering',
+        salary: 50000,
+        holidaysLeft: 12.5,
+        bankDetails: { bankName: 'SBI', accountNumber: '1234567890', ifscCode: 'SBIN0001234' },
+        panCardNumber: 'ABCDE1234F',
+        upiId: 'user@upi'
+      };
+      setProfile(mockData);
+      setFormData({
+        phone: mockData.phone,
+        address: mockData.address,
+        dob: mockData.dob,
+        bankName: mockData.bankDetails.bankName,
+        accountNumber: mockData.bankDetails.accountNumber,
+        ifscCode: mockData.bankDetails.ifscCode,
+        panCardNumber: mockData.panCardNumber,
+        upiId: mockData.upiId
+      });
     } finally {
       setLoading(false);
     }

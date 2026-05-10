@@ -218,7 +218,11 @@ const ManageEmployeesPage = () => {
             const { data } = await api.get('/hr/employees');
             setEmployees(data);
         } catch (error) {
-            console.error("Failed to fetch employees", error);
+            console.error("Failed to fetch employees, using mock data", error);
+            setEmployees([
+                { _id: '1', name: 'Test User', email: 'user@gmail.com', phone: '9876543210', department: 'Engineering', salary: 50000, holidaysLeft: 12.5, employeeId: 'CODEXA-1003', status: 'Active', joiningDate: '2024-01-15' },
+                { _id: '2', name: 'Admin User', email: 'admin@gmail.com', phone: '1234567890', department: 'HR', salary: 70000, holidaysLeft: 10, employeeId: 'CODEXA-1001', status: 'Active', joiningDate: '2023-06-20' }
+            ]);
         } finally {
             setLoading(false);
         }

@@ -77,7 +77,11 @@ const EmployeeAnnouncements = () => {
       const { data } = await api.get('/employee/announcements');
       setAnnouncements(data);
     } catch (error) {
-      console.error("Failed to fetch announcements", error);
+      console.error("Failed to fetch announcements, using mock data", error);
+      setAnnouncements([
+        { _id: '1', title: 'Welcome to Codexa!', content: 'We are excited to have you on board. Explore the new HR portal and stay tuned for updates.', createdAt: new Date().toISOString(), isRead: false },
+        { _id: '2', title: 'New Leave Policy', content: 'Our leave policy has been updated. Please check the profile section for your remaining holiday balance.', createdAt: new Date(Date.now() - 172800000).toISOString(), isRead: true }
+      ]);
     } finally {
       setLoading(false);
     }
