@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "cd HR-portal && npm install && npm run build"
+    "build": "npm install --prefix HR-portal && npm run build --prefix HR-portal"
   }
 }
